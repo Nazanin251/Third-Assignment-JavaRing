@@ -1,17 +1,18 @@
 package org.project.object.armors;
 
-// TODO: UPDATE IMPLEMENTATION
 public abstract class Armor {
-    private int defense;
-    private int maxDefense;
-    private int durability;
-    private int maxDurability;
-
-    private boolean isBroke;
+    protected int defense;
+    protected int maxDefense;
+    protected int durability;
+    protected int maxDurability;
+    protected boolean isBroke;
 
     public Armor(int defense, int durability) {
         this.defense = defense;
         this.durability = durability;
+        this.maxDefense = defense;
+        this.maxDurability = durability;
+        this.isBroke = false;
     }
 
     public void checkBreak() {
@@ -21,7 +22,6 @@ public abstract class Armor {
         }
     }
 
-    // TODO: (BONUS) UPDATE THE REPAIR METHOD
     public void repair() {
         isBroke = false;
         defense = maxDefense;

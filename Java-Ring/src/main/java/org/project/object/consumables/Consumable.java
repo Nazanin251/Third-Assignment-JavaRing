@@ -1,8 +1,7 @@
 package org.project.object.consumables;
 
-// TODO: UPDATE IMPLEMENTATION
+import org.project.entity.Entity;
+
 public abstract class Consumable {
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS METHODS
-    */
+    public abstract void use(Entity target);
 }
